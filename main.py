@@ -1,15 +1,21 @@
 from fastapi import FastAPI
 import uvicorn
 from controller.candidate_controller import candidate_controller
+from controller.candidate_profile_controller import profile_controller
+from database import create_table
+from exception.global_exceptipns import global_exceptions
 
 app = FastAPI(
     title="kussoneka",
     version="1.0")
 
 
-routes = [
+create_table() # cria as tabelas da base de dados.
+global_exceptions(app)
 
-    candidate_controller
+routes = [
+    candidate_controller,
+    profile_controller
 ]
 
 for controller in routes:

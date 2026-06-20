@@ -1,2 +1,2 @@
-from candidate import Candidate
-from candidate_profile import CandidateProfile
+from domain.candidate import Candidate
+from domain.candidate_profile import CandidateProfile
