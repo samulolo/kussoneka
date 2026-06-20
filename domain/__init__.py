@@ -1,0 +1,2 @@
+from candidate import Candidate
+from candidate_profile import CandidateProfile
